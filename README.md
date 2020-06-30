@@ -17,4 +17,9 @@ Based upon the analysis, selected word or phrase is primarly the same for all ne
 Look at the words and characters to understand more about them. There are some random Unicode characters, a lot of misspelled words, and several slangs in the tweets. This understanding will help design the models better later on. Details at [twitter_text_data_analysis.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/twitter_text_data_analysis.ipynb).
 
 #### 3. Text pre-processing and post-processing experiment
+Some experiments to understand what's the difference between the tweet and selected text. Also, if test tweet matches well with the training tweet. Regex based tokenization (to make sure that punctutations and special characters are seperated out from the actual word), Lemmetization and Spell correction were experimented with. More details available at [transform_experiments.ipynb] (https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/transform_experiments.ipynb)
+
+I ended up not using most of the techniques used during this experiment. Transformers gave me the best results. Most of the transformers used subword tokenizers that automatically takes care of incomplete or long words. But, this exercise was really good to understand the data as I designed the models.
+
+#### 4. Visualize positive, neutral and Negative words
 
