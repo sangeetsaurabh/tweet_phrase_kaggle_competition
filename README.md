@@ -22,4 +22,10 @@ Some experiments to understand what's the difference between the tweet and selec
 I ended up not using most of the techniques used during this experiment. Transformers gave me the best results. Most of the transformers used subword tokenizers that automatically takes care of incomplete or long words. But, this exercise was really good to understand the data as I designed the models.
 
 #### 4. Visualize positive, neutral and Negative words
+- A embedding is trained using embedding bag (PyTorch) algorithm to understand positive and negative words -  [embedding_bag_model.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/embedding_bag_model.ipynb)
+
+- Visualize positive, neutral and negative words using dimensionality reduction technique such as PCA and T-sne and clustering with k-means and GMM algorithms - [pca_and_t_sne_embedding_calculations_and_visualization.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/pca_and_t_sne_embedding_calculations_and_visualization.ipynb)
+
+- Visualize words of positive and negative emotion tweets separately [visualize_postivie_and_negative_sentences.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/visualize_postivie_and_negative_sentences.ipynb)
+
 
