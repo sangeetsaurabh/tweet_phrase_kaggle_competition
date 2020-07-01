@@ -30,4 +30,10 @@ I ended up not using most of the techniques used during this experiment. Transfo
 
 Through these visualizations, it was clear that negative and positive words are intermingled in tweets with positive and negative emotions. So, it may be useful to use algorithms that look at whole sentences (e.g. LSTM, GRU, Attention, Transformer, etc.) rather than single word separately.
 
+#### 5. Build a bi-lstm model to predict selected words
+
+- input tweets were pre-processed to make them ready for bi-lstm PyTorch model - [Data_preprocessing_for_biLSTM.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/Data_preprocessing_for_biLSTM.ipynb)
+
+- bi-lstm model was run to predict the text
+
 
