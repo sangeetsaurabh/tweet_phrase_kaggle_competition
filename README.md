@@ -32,8 +32,10 @@ Through these visualizations, it was clear that negative and positive words are 
 
 #### 5. Build a bi-lstm model to predict selected words
 
-- input tweets were pre-processed to make them ready for bi-lstm PyTorch model - [Data_preprocessing_for_biLSTM.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/Data_preprocessing_for_biLSTM.ipynb)
+- input tweets were pre-processed to make them ready for bi-lstm PyTorch model - [Data_preprocessing_for_biLSTM.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/bilstm_pytorch/Data_preprocessing_for_biLSTM.ipynb)
 
-- bi-lstm model was run to predict the text
+- bi-lstm model was run to predict the selected text - [biLSTM_pytorch_model.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/bilstm_pytorch/biLSTM_pytorch_model.ipynb)
+
+bi-lstm model performed better than baseline with Jaccard score of 0.61. But, it's still not close to the leaderboard scores. While building the bi-lstm model, I realized that question/answer models of transformers may be the best to predict selected text.
 
 
