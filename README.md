@@ -26,6 +26,8 @@ I ended up not using most of the techniques used during this experiment. Transfo
 
 - Visualize positive, neutral and negative words using dimensionality reduction technique such as PCA and T-sne and clustering with k-means and GMM algorithms - [pca_and_t_sne_embedding_calculations_and_visualization.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/pca_and_t_sne_embedding_calculations_and_visualization.ipynb)
 
-- Visualize words of positive and negative emotion tweets separately [visualize_postivie_and_negative_sentences.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/visualize_postivie_and_negative_sentences.ipynb)
+- Visualize words of positive and negative emotion tweets separately - [visualize_postivie_and_negative_sentences.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/visualize_postivie_and_negative_sentences.ipynb)
+
+Through these visualizations, it was clear that negative and positive words are intermingled in tweets with positive and negative emotions. So, it may be useful to use algorithms that look at whole sentences (e.g. LSTM, GRU, Attention, Transformer, etc.) rather than single word separately.
 
 
