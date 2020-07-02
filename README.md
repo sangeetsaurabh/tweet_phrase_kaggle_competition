@@ -32,7 +32,7 @@ Through these visualizations, it was clear that negative and positive words are 
 
 #### 5. Build a bi-lstm model to predict selected words
 
-Using Glove ("glove.6B.100d") embeddings, a bi-lstm pytorch model was built to predict selected text.
+Using Glove ("glove.twitter.27B.100d") vector embeddings, a bi-lstm pytorch model was built to predict selected text.
 
 - input tweets were pre-processed to make them ready for bi-lstm PyTorch model - [Data_preprocessing_for_biLSTM.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/bilstm_pytorch/Data_preprocessing_for_biLSTM.ipynb)
 
