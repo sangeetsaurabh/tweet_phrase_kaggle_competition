@@ -52,7 +52,10 @@ Bert, Roberta, Xlnet, Xlm-roberta, and Electra models were built. All the models
 
 2. [Keras Transformers] (https://github.com/sangeetsaurabh/tweet_phrase_kaggle_competition/tree/master/keras_transformer)
 
-## Conclusion
+
+### Conclusion
+
+With 0.715 scores, this implementation reached quite close to leaders (the winner was 0.735, and the bronze medal score was 0.717). When I started this implementation, only two weeks were left for the competition. Transformers are game-changing - it was great to see that so much can be done just in 2 weeks of part-time implementation. Wish there was a little more time to test and improved the models more.  
 
 
 
