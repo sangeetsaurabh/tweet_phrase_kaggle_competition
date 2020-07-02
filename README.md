@@ -48,9 +48,9 @@ The Sequence-to-sequence model produced results that were very close to the bi-l
 #### 7. "Attention is all you need" transformers
 
 Bert, Roberta, Xlnet, Xlm-roberta, and Electra models were built. All the models performed way better than bi-lstm and sequeuence-to-sequence attention models.  Roberta and Xlnet performed the best with giving a Jaccard score close to 0.715. Detailed implementation available at -
-1. [PyTorch Transformers] (https://github.com/sangeetsaurabh/tweet_phrase_kaggle_competition/tree/master/pytorch_transformer)
+1. [PyTorch Transformers](https://github.com/sangeetsaurabh/tweet_phrase_kaggle_competition/tree/master/pytorch_transformer)
 
-2. [Keras Transformers] (https://github.com/sangeetsaurabh/tweet_phrase_kaggle_competition/tree/master/keras_transformer)
+2. [Keras Transformers](https://github.com/sangeetsaurabh/tweet_phrase_kaggle_competition/tree/master/keras_transformer)
 
 
 ### Conclusion
