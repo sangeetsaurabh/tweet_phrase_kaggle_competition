@@ -1,4 +1,4 @@
-# tweet_sentiment_extraction
+# tweet_sentiment_extraction_kaggle_competition
 
 The goal of this repository is to explain the approach taken to participate in a Kaggle NLP competition. This repository also contains the Notebooks that were created to compete in [an NLP Kaggle competition](https://www.kaggle.com/c/tweet-sentiment-extraction/overview).
 
