@@ -11,26 +11,26 @@ The input dataset is called Sentiment Analysis. The training dataset contains te
 At a high level, here is the approach that was taken to solve the problem -
 
 #### 1. Understand the data ([training_data_analysis.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/training_data_analysis.ipynb))
-Based upon the analysis, selected word or phrase is primarly the same for all neutral tweets. For positive and negative emotions, selected text is small. So, I went ahead and made a submission to Kaggle with selected text as text. This gave me a baseline score of 0.59451.
+Based upon the analysis, selected word or phrase is primarly the same for all neutral tweets. For positive and negative emotion tweets, selected text is small. So, a submission was made to Kaggle with selected text as original tweet. This gave a baseline score of 0.59451.
 
 #### 2. Look at the text to understand number of words and characters
-Look at the words and characters to understand more about them. There are some random Unicode characters, a lot of misspelled words, and several slangs in the tweets. This understanding will help design the models better later on. Details at [twitter_text_data_analysis.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/twitter_text_data_analysis.ipynb).
+Look at the words and characters in the tweets to understand more about them. There are some random Unicode characters, a lot of misspelled words, and several slangs in the tweets. This understanding helped design the models better later on. Details at [twitter_text_data_analysis.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/twitter_text_data_analysis.ipynb).
 
-#### 3. Text pre-processing and post-processing experiments
-Some experiments to understand what's the difference between the tweet and selected text. Also, if test tweet matches well with the training tweet. Regex based tokenization (to make sure that punctutations and special characters are seperated out from the actual word), Lemmetization and Spell correction were experimented with. More details available at [transform_experiments.ipynb] (https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/transform_experiments.ipynb)
+#### 3. Experiment with text pre-processing and transformation
+Some experiments to understand what's the difference between the tweet and selected text. Also, if test dataset tweets match well with the training dataset tweets. Regex based tokenization (to make sure that punctutations and special characters are seperated out from the actual word), Lemmetization and Spell correction were experimented with. More details available at [transform_experiments.ipynb] (https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/transform_experiments.ipynb)
 
-I ended up not using most of the techniques used during this experiment. Transformers gave me the best results. Most of the transformers used subword tokenizers that automatically takes care of incomplete or long words. But, this exercise was really good to understand the data as I designed the models.
+Most of the techniques used during this experiment were not used. Transformers turned out the best options to solve this problem. The transformers used subword tokenizers that automatically took care of incomplete or long words. But, this exercise was really good to understand the data and figure out the right solution.
 
 #### 4. Visualize positive, neutral and Negative words
 - A embedding is trained using embedding bag (PyTorch) algorithm to understand positive and negative words -  [embedding_bag_model.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/embedding_bag_model.ipynb)
 
-- Visualize positive, neutral and negative words using dimensionality reduction technique such as PCA and T-sne and clustering with k-means and GMM algorithms - [pca_and_t_sne_embedding_calculations_and_visualization.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/pca_and_t_sne_embedding_calculations_and_visualization.ipynb)
+- Visualize positive, neutral and negative words using dimensionality reduction techniques (such as PCA and T-sne) and clustering (with k-means and GMM algorithms) - [pca_and_t_sne_embedding_calculations_and_visualization.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/pca_and_t_sne_embedding_calculations_and_visualization.ipynb)
 
 - Visualize words of positive and negative emotion tweets separately - [visualize_postivie_and_negative_sentences.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/visualize_postivie_and_negative_sentences.ipynb)
 
 Through these visualizations, it was clear that negative and positive words are intermingled in tweets with positive and negative emotions. So, it may be useful to use algorithms that look at whole sentences (e.g. LSTM, GRU, Attention, Transformer, etc.) rather than single word separately.
 
-#### 5. Build a bi-lstm model to predict selected words
+#### 5. bi-lstm model
 
 Using Glove ("glove.twitter.27B.100d") vector embeddings, a bi-lstm pytorch model was built to predict selected text.
 
@@ -38,6 +38,14 @@ Using Glove ("glove.twitter.27B.100d") vector embeddings, a bi-lstm pytorch mode
 
 - bi-lstm model was run to predict the selected text - [biLSTM_pytorch_model.ipynb](https://github.com/sangeetsaurabh/tweet_sentiment_extraction/blob/master/bilstm_pytorch/biLSTM_pytorch_model.ipynb)
 
-bi-lstm model performed better than baseline with Jaccard score of 0.61. But, it's still not close to the leaderboard scores. While building the bi-lstm model, I realized that question/answer models of transformers may be the best to predict selected text.
+bi-lstm model performed better than baseline with Jaccard score of 0.61. But, it's still not close to the leaderboard scores.So, a sequence-to-sequence model with attention was tried.
+
+#### 6. Sequence-to-sequence model with attention
+
+The Sequence-to-sequence model produced results that were very close to the bi-lstm model. At this point, through my research and the guidance from Kaggle grandmasters, I realized that transformers might be the best approach to solve this problem.  
+
+
+#### 7. "Attention is all you need" transformers
+
 
 
